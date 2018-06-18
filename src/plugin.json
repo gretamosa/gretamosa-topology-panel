@@ -1,0 +1,31 @@
+{
+  "type": "panel",
+  "name": "Topology Chart",
+  "id": "topology-panel",
+
+  "info": {
+    "description": "Topology chart panel for grafana",
+    "author": {
+      "name": "Naudit HPCN",
+      "url": "http://www.naudit.es"
+    },
+    "keywords": ["topology", "panel"],
+    "logos": {
+      "small": "src/img/topology_logo_small.png",
+      "large": "src/img/topology_logo_large.png"
+    },
+    "links": [
+      {"name": "Project site", "url": "https://github.com/g1zm0/topology-panel"},
+      {"name": "MIT License", "url": "https://github.com/g1zm0/topology-panel/blob/master/LICENSE"}
+    ],
+    "screenshots": [
+    ],
+    "version": "1.0.0",
+    "updated": "2018-06-12"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "4.6",
+    "plugins": [ ]
+  }
+}
