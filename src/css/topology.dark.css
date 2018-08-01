@@ -1,0 +1,277 @@
+.topology-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.topology-panel--legend-right {
+  flex-direction: row;
+}
+
+.topology-panel--legend-right .topology-legend {
+  flex: 0 1 10px;
+  height: 100%;
+}
+
+.topology-panel--legend-right .topology-legend-series {
+  display: block;
+  padding-left: 0px;
+}
+
+.topology-panel--legend-right .topology-legend-table .topology-legend-series {
+  display: table-row;
+}
+
+.topology-legend__container {
+  height: 100%;
+}
+
+.topology-panel__chart {
+  position: relative;
+  cursor: crosshair;
+  flex-grow: 1;
+  top: 10px;
+}
+
+.datapoints-warning {
+  pointer: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -50px;
+  margin-left: -100px;
+  width: 200px;
+  text-align: center;
+  cursor: auto;
+  padding: 10px;
+}
+
+.topology-legend {
+  flex: 0 1 auto;
+  margin: 0 1rem;
+  text-align: center;
+  padding-top: 6px;
+  position: relative;
+}
+
+.topology-legend .popover-content {
+  padding: 0;
+}
+
+.topology-legend-icon {
+  position: relative;
+  padding-right: 4px;
+  top: 1px;
+}
+
+.topology-legend-icon,
+.topology-legend-alias,
+.topology-legend-value {
+  cursor: pointer;
+  float: left;
+  white-space: nowrap;
+  font-size: 85%;
+  text-align: left;
+  color: #d8d9da;
+}
+
+.topology-legend-icon.current::before {
+  content: "Current: ";
+}
+
+.topology-legend-icon.max::before {
+  content: "Max: ";
+}
+
+.topology-legend-icon.min::before {
+  content: "Min: ";
+}
+
+.topology-legend-icon.total::before {
+  content: "Total: ";
+}
+
+.topology-legend-icon.avg::before {
+  content: "Avg: ";
+}
+
+.topology-legend-alias.current::before {
+  content: "Current: ";
+}
+
+.topology-legend-alias.max::before {
+  content: "Max: ";
+}
+
+.topology-legend-alias.min::before {
+  content: "Min: ";
+}
+
+.topology-legend-alias.total::before {
+  content: "Total: ";
+}
+
+.topology-legend-alias.avg::before {
+  content: "Avg: ";
+}
+
+.topology-legend-value.current::before {
+  content: "Current: ";
+}
+
+.topology-legend-value.max::before {
+  content: "Max: ";
+}
+
+.topology-legend-value.min::before {
+  content: "Min: ";
+}
+
+.topology-legend-value.total::before {
+  content: "Total: ";
+}
+
+.topology-legend-value.avg::before {
+  content: "Avg: ";
+}
+
+.topology-legend-icon .fa {
+  font-size: 135%;
+  position: relative;
+  top: 1px;
+}
+
+.topology-legend-series {
+  float: left;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+
+.topology-legend-series--right-y {
+  float: right;
+}
+
+.topology-legend-value {
+  padding-left: 6px;
+}
+
+.topology-legend-table tbody {
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  padding-bottom: 1px;
+  padding-right: 5px;
+}
+
+.topology-legend-table .topology-legend-series {
+  display: table-row;
+  float: none;
+  padding-left: 0;
+}
+
+.topology-legend-table .topology-legend-series--right-y {
+  float: none;
+}
+
+.topology-legend-table .topology-legend-series--right-y .topology-legend-alias::after {
+  content: "(right-y)";
+  padding: 0 5px;
+  color: #8e8e8e;
+}
+
+.topology-legend-table td,
+.topology-legend-alias,
+.topology-legend-icon,
+.topology-legend-value {
+  float: none;
+  display: table-cell;
+  white-space: nowrap;
+  padding: 2px 10px;
+  text-align: right;
+}
+
+.topology-legend-table .topology-legend-icon {
+  width: 5px;
+  padding: 0;
+  top: 0;
+}
+
+.topology-legend-table .topology-legend-icon .fa {
+  top: 4px;
+}
+
+.topology-legend-table .topology-legend-value {
+  padding-left: 15px;
+}
+
+.topology-legend-table .topology-legend-alias {
+  padding-left: 7px;
+  text-align: left;
+  width: 95%;
+  max-width: 650px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.topology-legend-table .topology-legend-series:nth-child(odd) {
+  background: #262628;
+}
+
+.topology-legend-table .topology-legend-value.current::before {
+  content: "";
+}
+
+.topology-legend-table .topology-legend-value.max::before {
+  content: "";
+}
+
+.topology-legend-table .topology-legend-value.min::before {
+  content: "";
+}
+
+.topology-legend-table .topology-legend-value.total::before {
+  content: "";
+}
+
+.topology-legend-table .topology-legend-value.avg::before {
+  content: "";
+}
+
+.topology-legend-table th {
+  text-align: right;
+  padding: 0px 10px 1px 0;
+  font-weight: bold;
+  color: #33b5e5;
+  font-size: 85%;
+  white-space: nowrap;
+}
+
+.topology-legend-series-hidden .topology-legend-value,
+.topology-legend-series-hidden .topology-legend-alias {
+  color: #8e8e8e;
+}
+
+.topology-tooltip {
+  white-space: nowrap;
+  font-size:12px;
+  background-color: #141414;
+  color: #d8d9da;
+}
+
+.topology-tooltip .topology-tooltip-time {
+  text-align: center;
+  position: relative;
+  top: -3px;
+  padding: 0.2rem;
+  font-weight: bold;
+  color: #d8d9da;
+}
+
+.topology-tooltip .topology-tooltip-value {
+  display: table-cell;
+  font-weight: bold;
+  padding-left: 15px;
+  text-align: right;
+}

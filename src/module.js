@@ -1,9 +1,9 @@
-import { PieChartCtrl } from './piechart_ctrl';
+import { TopologyCtrl } from './topology_ctrl';
 import { loadPluginCss } from 'app/plugins/sdk';
 
 loadPluginCss({
-  dark: 'plugins/grafana-piechart-panel/css/piechart.dark.css',
-  light: 'plugins/grafana-piechart-panel/css/piechart.light.css',
+  dark: 'plugins/topology-panel/css/topology.dark.css',
+  light: 'plugins/topology-panel/css/topology.light.css',
 });
 
-export { PieChartCtrl as PanelCtrl };
+export { TopologyCtrl as PanelCtrl };
