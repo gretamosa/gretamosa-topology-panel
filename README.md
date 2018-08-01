@@ -1,6 +1,6 @@
 ![](https://github.com/gretamosa/topology-panel/blob/master/src/img/topology_logo_small.png) Topology Panel
 ================
-[Website](http://www.naudit.es/)
+[Company Website](http://www.naudit.es/)
 
 Topology Panel is an Sigma.js-based plugin for Elasticsearch and InfluxDB.
 
