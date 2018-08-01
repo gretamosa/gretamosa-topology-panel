@@ -4,6 +4,9 @@
 
 Topology Panel is an Sigma.js-based plugin for Elasticsearch and InfluxDB.
 
+![](https://github.com/gretamosa/topology-panel/blob/master/src/img/topology-snapshot-1.png)
+![](https://github.com/gretamosa/topology-panel/blob/master/src/img/topology-snapshot-2.png)
+
 # Install
 
 1. Clone source code from github.com repository
