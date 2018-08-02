@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/gretamosa/gretamosa-topology-panel.git"
   },
-  "author": "gretamosa",
+  "author": "Naudit HPCN S.L.",
   "license": "GPL-3.0",
   "scripts": {
     "build": "grunt",
