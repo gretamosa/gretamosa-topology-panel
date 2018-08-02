@@ -1,7 +1,7 @@
 {
   "type": "panel",
   "name": "Topology Panel",
-  "id": "topology-panel",
+  "id": "gretamosa-topology-panel",
 
   "info": {
     "description": "Sigma.js graph panel for grafana",
