@@ -1,12 +1,12 @@
 {
-  "name": "topology-panel",
+  "name": "gretamosa-topology-panel",
   "version": "1.0.0",
   "description": "Sigma.js graph panel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gretamosa/topology-panel.git"
+    "url": "https://github.com/gretamosa/gretamosa-topology-panel.git"
   },
-  "author": "g1zm0",
+  "author": "gretamosa",
   "license": "GPL-3.0",
   "scripts": {
     "build": "grunt",
