@@ -1,5 +1,4 @@
 node_modules
-dist
 
 # locally required config files
 public/css/*.min.css

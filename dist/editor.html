@@ -1,0 +1,120 @@
+<div class="editor-row">
+  
+  <div class="section gf-form-group">
+    <h5 class="section-heading">Nodes</h5>
+    <div class="gf-form">
+      <span class="gf-form-label width-8">Min Node Size</span>
+      <div class="gf-form-select-wrapper max-width-10">
+        <input type="number" class="gf-form-input width-9" ng-model="ctrl.panel.minNodeSize" ng-change="editor.render()" ng-model-onblur
+          placeholder="auto">
+      </div>
+    </div>
+    <div class="gf-form">
+      <gf-form-switch class="gf-form" label="Drag nodes" label-class="width-8" checked="ctrl.panel.draggable" on-change="ctrl.render()"></gf-form-switch>
+    </div>
+  </div>
+
+  <div class="section gf-form-group">
+    <h5 class="section-heading">Edges</h5>
+
+    <div class="gf-form">
+      <span class="gf-form-label width-9">Edge Type</span>
+      <div class="gf-form-select-wrapper max-width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.edgeType" ng-options="v for v in ['line','arrow','curvedArrow','curve']"
+          ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+
+    <div class="gf-form">
+      <span class="gf-form-label width-9">Min Edge Size</span>
+      <div class="gf-form-select-wrapper max-width-10">
+        <input type="number" class="gf-form-input" ng-model="ctrl.panel.minEdgeSize" ng-change="editor.render()" ng-model-onblur
+          placeholder="auto">
+      </div>
+    </div>
+
+    <div class="gf-form">
+      <label class="gf-form-label width-9">Edge Size Field</label>
+      <div class="gf-form-select-wrapper max-width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.edgeWeight" ng-options="f for f in ctrl.panel.varList" ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+
+    <div class="gf-form">
+      <gf-form-switch class="gf-form" label="Show Edge Labels" label-class="width-9" checked="ctrl.panel.showEdgeLabels" on-change="ctrl.render()"></gf-form-switch>
+    </div>
+
+    <div class="gf-form" ng-if="ctrl.panel.showEdgeLabels">
+      <span class="gf-form-label width-9">Edge Label Size</span>
+      <div class="gf-form-select-wrapper max-width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.edgeLabelSize" ng-options="v for v in ['proportional','fixed']"
+          ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="section gf-form-group">
+    <h5 class="section-heading">Connections</h5>
+    <div class="gf-form">
+      <label class="gf-form-label width-9">Source Field</label>
+      <div class="gf-form-select-wrapper max-width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.srcNode" ng-options="f for f in ctrl.panel.varList" ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+
+    <div class="gf-form">
+      <label class="gf-form-label width-9">Destination Field</label>
+      <div class="gf-form-select-wrapper max-width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.dstNode" ng-options="f for f in ctrl.panel.varList" ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+
+    <div class="gf-form">
+      <gf-form-switch class="gf-form" label="Grouping Nodes" label-class="width-9" checked="ctrl.panel.trackable" on-change="ctrl.render()"></gf-form-switch>
+    </div>
+
+    <div class="gf-form" ng-if="ctrl.panel.trackable">
+      <label class="gf-form-label width-9">Grouping Field</label>
+      <div class="gf-form-select-wrapper max-width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.colorNode" ng-options="f for f in ctrl.panel.varList" ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="section gf-form-group">
+    <h5 class="section-heading">Filtering</h5>
+    <div class="gf-form">
+      <label class="gf-form-label width-9">Filtering Mode</label>
+      <div class="gf-form-select-wrapper max-width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.filterMode" ng-options="c for c in ['edges','nodes','both']" ng-change="ctrl.render()"></select>
+      </div>
+    </div><br />
+    <h5 class="section-heading">Thresholds</h5>
+    <div class="gf-form">
+      <label class="gf-form-label width-8">Thresholds<tip>Comma separated values according to <u>Edge Size Field</u> value</tip></label>
+      <input type="text" class="gf-form-input width-10" ng-model="ctrl.panel.thresholds" placeholder="50,80" ng-blur="ctrl.render()" array-join>
+    </div>
+    <div class="gf-form">
+      <label class="gf-form-label width-8">Color Mode</label>
+      <div class="gf-form-select-wrapper width-10">
+        <select class="gf-form-input" ng-model="ctrl.panel.colorMode" ng-options="c for c in ['edges','nodes']" ng-change="ctrl.render()"></select>
+      </div>
+    </div>
+    <div class="gf-form">
+      <label class="gf-form-label width-8">Colors</label>
+      <span class="gf-form-label">
+        <color-picker color="ctrl.panel.colors[0]" onChange="ctrl.onColorChange(0)"></color-picker>
+      </span>
+      <span class="gf-form-label">
+        <color-picker color="ctrl.panel.colors[1]" onChange="ctrl.onColorChange(1)"></color-picker>
+      </span>
+      <span class="gf-form-label">
+        <color-picker color="ctrl.panel.colors[2]" onChange="ctrl.onColorChange(2)"></color-picker>
+      </span>
+      <div class="gf-form-label">
+        <a class="pointer" ng-click="ctrl.invertColorOrder()">Invert</a>
+      </div>
+    </div>
+  </div>
+    
+</div>

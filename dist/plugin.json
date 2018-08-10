@@ -1,0 +1,21 @@
+{
+  "type": "panel",
+  "name": "Topology Panel",
+  "id": "gretamosa-topology-panel",
+
+  "info": {
+    "description": "Sigma.js graph panel for grafana",
+    "author": {
+      "name": "Naudit HPCN S.L.",
+      "url": "http://www.naudit.es"
+    },
+    "keywords": ["topology","graph", "sigmajs"],
+    "version": "1.0.0",
+    "updated": "2018-08-01"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "5.x.x",
+    "plugins": [ ]
+  }
+}
