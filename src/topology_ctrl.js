@@ -53,7 +53,7 @@ export class TopologyCtrl extends MetricsPanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Options', 'public/plugins/topology-panel/editor.html', 2);
+    this.addEditorTab('Options', 'public/plugins/gretamosa-topology-panel/editor.html', 2);
     this.unitFormats = kbn.getUnitFormats();
     this.loadTemplatingVars();
   }
