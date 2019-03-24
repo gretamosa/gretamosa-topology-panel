@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-System.register(['./topology_ctrl', 'app/plugins/sdk'], function (_export, _context) {
+System.register(["./topology_ctrl", "app/plugins/sdk"], function (_export, _context) {
   "use strict";
 
   var TopologyCtrl, loadPluginCss;
@@ -11,13 +11,12 @@ System.register(['./topology_ctrl', 'app/plugins/sdk'], function (_export, _cont
       loadPluginCss = _appPluginsSdk.loadPluginCss;
     }],
     execute: function () {
-
       loadPluginCss({
         dark: 'plugins/gretamosa-topology-panel/css/topology.dark.css',
         light: 'plugins/gretamosa-topology-panel/css/topology.light.css'
       });
 
-      _export('PanelCtrl', TopologyCtrl);
+      _export("PanelCtrl", TopologyCtrl);
     }
   };
 });

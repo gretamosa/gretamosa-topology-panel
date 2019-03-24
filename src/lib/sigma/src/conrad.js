@@ -975,8 +975,11 @@
     version: '0.1.0'
   };
 
-  if (typeof this.conrad !== 'undefined')
-    throw 'An object called sigma is already in the global scope.';
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports)
+      exports = module.exports = conrad;
+    exports.conrad = conrad;
+  }
+  global.conrad = conrad;
 
-  this.conrad = conrad;
 }).call(this);
